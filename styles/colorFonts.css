@@ -1,0 +1,58 @@
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.landing__greeting-vanityCard {
+  font-family: "Fraunces", serif;
+  font-size: 2em;
+}
+
+.projects__title {
+  font-family: "Fraunces", serif;
+  font-size: 2em;
+}
+
+.about__title {
+  font-family: "Fraunces", serif;
+  font-size: 2em;
+}
+.about__content {
+  background-color: #C4C4C4;
+}
+.about__content-text {
+  font-size: 1.6em;
+  font-family: "Commissioner", sans-serif;
+}
+
+.contact__title {
+  font-family: "Fraunces", serif;
+  font-size: 2em;
+}
+.contact__form {
+  font-family: "Commissioner", sans-serif;
+  background-color: #0078B5;
+}
+.contact__form-submit {
+  background-color: #4C926D;
+}
+.contact__form-submit:hover {
+  background-color: green;
+}
+
+@media only screen and (min-width: 700px) {
+  .projects__title {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+
+  .about__title {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+
+  .contact__title {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+}

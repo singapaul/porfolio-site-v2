@@ -1,19 +1,15 @@
-section {
-  min-height: 100vh;
-}
-
 // Outlining the page dividers 
 
 .pageBreak {
   height: 15vh;
-  background-color: pink;
   border: 2px solid black;
+  overflow: hidden;
 
   &__svg {
-    height: 100%;
+    height: 90%;
     display: block;
-    margin: auto;
-    max-width: 100%;
+
+    //max-width: 100%;
   }
 
 }
@@ -36,7 +32,27 @@ section {
     margin: 0;
     border: solid 2px black;
     grid-area: 1/1/2/2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &-links {
+      padding: 0 5%;
+      white-space: nowrap;
+      margin-right: 5%;
+    }
+
+    &-links a {
+      margin: 0 3%;
+      display: inline;
+    }
+
+    &-icon {
+      padding: 0 5%;
+    }
   }
+
 
   &__greeting {
     margin: 0;
@@ -58,6 +74,7 @@ section {
 
   &__svg {
     margin: 0;
+    width: 100%;
     border: solid 2px black;
     grid-area: 3/1/4/2;
     display: flex;
@@ -65,20 +82,19 @@ section {
     justify-content: center;
     align-items: center;
 
-
     &-img {
-      height: 100%;
-      width: 100%;
+      width: 80%;
     }
   }
 }
 
 
 .projects {
+
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10% 25% 65%;
+  grid-template-rows: 5% 10% 1fr;
   margin: 0%;
   border: 0;
   padding: 0;
@@ -89,75 +105,55 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-
-
+    width: 100%;
   }
-
 
   &__display {
     // border: solid 2px black;
     grid-area: 3/1/4/2;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 1%;
-    // %margin: 2%;
-    // padding: 2%;
     width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    justify-content: space-evenly;
+
 
     &-example {
-      height: 18em;
-      width: 18em;
+      width: 17rem;
+      height: 17rem;
       border: solid pink 2px;
       justify-self: center;
       align-self: center;
-      // margin: 1em;
+
     }
   }
 
   &__svg {
     border: solid 2px black;
     grid-area: 2/1/3/2;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 
     &-img {
       height: 100%;
-      width: 100%;
     }
   }
 }
 
-// tagretting the IDs
 
-#projects__display-item1 {
-  grid-area: 1/1/2/2;
-}
-
-#projects__display-item2 {
-  grid-area: 1/2/2/3;
-}
-
-#projects__display-item3 {
-  grid-area: 2/1/3/2;
-}
-
-#projects__display-item4 {
-  grid-area: 2/2/3/3;
-}
-
-#projects__display-item5 {
-  grid-area: 3/1/4/2;
-}
-
-#projects__display-item6 {
-  grid-area: 3/2/4/3;
-}
 
 .about {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 15% 1fr;
+  grid-template-rows: 10% 1fr;
   margin: 0;
   border: 0;
   padding: 0;
@@ -195,11 +191,12 @@ section {
 
 
 .contact {
+  min-height: 220vh;
   width: 100%;
   display: grid;
   height: 92vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 10% 25% 65%;
+  grid-template-rows: 10% 30% 60%;
   margin: 0;
   border: 0;
   padding: 0;
@@ -229,7 +226,7 @@ section {
     align-items: center;
     justify-content: space-around;
     padding: 5% 0 5% 0;
-    margin: 5%;
+    // margin: 5%;
 
     &-label {
       padding-left: 10%;
@@ -277,11 +274,31 @@ section {
 }
 
 
-.footer {
+footer {
   height: 8vh;
   width: 100%;
   border: solid 2px black;
   min-height: 2vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  ul {
+    padding: 0 5%;
+    white-space: nowrap;
+    margin-right: 5%;
+  }
+
+  a {
+    margin: 0 3%;
+    display: inline;
+  }
+
+  p {
+    padding: 0 5%;
+  }
+
 }
 
 
@@ -302,7 +319,7 @@ section {
 
 
   body {
-    background-color: $white;
+    background-color: purple;
   }
 
   .landing {

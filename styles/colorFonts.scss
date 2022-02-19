@@ -15,9 +15,21 @@ serif;
 $bodyFont:'Commissioner',
 sans-serif;
 
+// Site wide styles 
+
+// a tags
+a {
+  text-decoration: none;
+  color: $black;
+
+}
 
 // Styling the home page
 .landing {
+
+  &__navi{ 
+    
+  }
   &__greeting {
 
     &-vanityCard {
