@@ -1,28 +1,25 @@
-// Outlining the page dividers 
 
 .pageBreak {
   height: 15vh;
   border: 2px solid black;
   overflow: hidden;
+  margin: 2vh 0;
 
   &__svg {
     height: 90%;
     display: block;
-
-    //max-width: 100%;
   }
 
 }
 
-/* styling the landing */
-// native styling for mobile
 
 .landing {
+  min-height: 120vh;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  // adjust this later, massively reduce for nav bar
-  grid-template-rows: 5% 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   margin: 0%;
   border: 0;
   padding: 0;
@@ -30,8 +27,8 @@
 
   &__navi {
     margin: 0;
+    width: 100%;
     border: solid 2px black;
-    grid-area: 1/1/2/2;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -50,6 +47,8 @@
 
     &-icon {
       padding: 0 5%;
+      font-weight: bold;
+      font-size: 1.5em;
     }
   }
 
@@ -57,47 +56,80 @@
   &__greeting {
     margin: 0;
     border: solid 2px black;
-    grid-area: 2/1/3/2;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 90vh;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: flex-start;
+    width: 100%;
+
+
+
+
 
     &-vanityCard {
       border: dotted 2px black;
-      min-height: 100%;
-      display: flex;
+      align-self: center;
+      margin: auto;
+
+      display: inline-flex;
       flex-direction: column;
-      justify-content: space-around;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 0 0 6%;
+      margin-left: 7%;
+      border-left: 2px solid black;
+      height: 80%;
+
+      p {
+        font-size: 0.7em;
+        font-weight: normal;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        font-weight: bolder;
+      }
+
+      h2 {
+        font-size: 1em;
+        font-weight: normal;
+      }
+
+      button {
+        width: 50%;
+        margin-top: 20%;
+        padding: 6%;
+        font-size: 0.5em;
+
+      }
     }
   }
 
   &__svg {
     margin: 0;
     width: 100%;
+    //height: fit-content;
     border: solid 2px black;
-    grid-area: 3/1/4/2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     &-img {
-      width: 80%;
+      width: 90%;
+      height: 100%;
     }
   }
 }
-
 
 .projects {
 
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 5% 10% 1fr;
-  margin: 0%;
-  border: 0;
-  padding: 0;
+  grid-template-rows: 5% 15% 1fr;
+
 
   &__title {
     border: solid 2px black;
@@ -120,7 +152,7 @@
 
 
     &-example {
-      width: 17rem;
+      width: 80%;
       height: 17rem;
       border: solid pink 2px;
       justify-self: center;
@@ -147,7 +179,21 @@
   }
 }
 
+#projects__display-item4 {
+  display: none;
+  visibility: hidden;
+}
 
+
+#projects__display-item5 {
+  display: none;
+  visibility: hidden;
+}
+
+#projects__display-item6 {
+  display: none;
+  visibility: hidden;
+}
 
 .about {
   width: 100%;
@@ -189,44 +235,45 @@
   }
 }
 
-
 .contact {
-  min-height: 220vh;
+  // min-height: 200vh;
   width: 100%;
-  display: grid;
-  height: 92vh;
-  grid-template-columns: 1fr;
-  grid-template-rows: 10% 30% 60%;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
   border: 0;
   padding: 0;
 
   &__svg {
     border: solid 2px black;
-    grid-area: 2/1/3/2;
+    // grid-area: 2/1/3/2;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: 100%;
-    max-width: 100%;
+    //height: 100%;
+    width: 50%;
+    order: 2;
 
     &-img {
       height: 100%;
-      width: fit-content;
-      object-fit: cover;
     }
   }
 
 
   &__form {
     border: solid 2px black;
-    grid-area: 3/1/4/2;
+    // grid-area: 3/1/4/2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding: 5% 0 5% 0;
-    // margin: 5%;
+    //justify-content: space-evenly;
+    //padding: 5% 0 5% 0;
+    margin: 5%;
+    // width:fit-content;
+    height: fit-content;
+    width: 80%;
+    order: 3;
 
     &-label {
       padding-left: 10%;
@@ -266,13 +313,13 @@
 
   &__title {
     border: solid 2px black;
-    grid-area: 1/1/2/2;
+    // grid-area: 1/1/2/2;
     display: flex;
     justify-content: center;
     align-items: center;
+    order: 1;
   }
 }
-
 
 footer {
   height: 8vh;
@@ -288,141 +335,471 @@ footer {
     padding: 0 5%;
     white-space: nowrap;
     margin-right: 5%;
+    font-size: 0.8em;
+
   }
 
   a {
     margin: 0 3%;
     display: inline;
+
   }
 
   p {
     padding: 0 5%;
+    white-space: nowrap;
+    font-size: 0.8rem;
+
   }
 
 }
 
+@media only screen and (min-width: 482px) {
 
-// styling the layout for tablet
-// After 720px go to the tablet site
-// @media only screen and (min-width: 600px) {
-//   body {
-//     // Only thing to change is to change the layout on the projects grid
-//     background-color: purple;
-//   }
-// }
-
-
-// styling the layout for desktop
-// After 720px go to the desktop site
-
-@media only screen and (min-width: 700px) {
-
-
-  body {
-    background-color: purple;
-  }
 
   .landing {
+    min-height: 140vh;
 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10% 90%;
+
 
     &__navi {
-      grid-area: 1/1/2/3;
+
+
+      &-links {}
+
+      &-links a {
+        font-size: 1.2em;
+      }
+
+      &-icon {
+        font-size: 2em;
+      }
     }
+
 
     &__greeting {
 
-      grid-area: 2/1/3/2;
+      height: 100vh;
 
-      // might need to ammend this line below
-      &-vanityCard {}
 
+      &-vanityCard {
+
+        p {
+          font-size: 1em;
+        }
+
+        h1 {
+          font-size: 2em;
+        }
+
+        h2 {
+          font-size: 1.2em;
+        }
+
+        button {
+          width: 50%;
+          font-size: 0.6em;
+        }
+      }
     }
 
     &__svg {
-      grid-area: 2/2/3/3;
-      overflow: hidden;
+      margin: 0;
+      width: 100%;
+
 
       &-img {
-        height: 100%;
-        width: 100%;
+        width: 80%;
       }
-
     }
   }
 
 
   .projects {
 
-    grid-template-columns: 1fr 3fr 15%;
-    grid-template-rows: 1fr;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 20% 80%;
+    align-items: center;
+    justify-items: center;
+    min-height: 180vh;
 
 
     &__title {
 
-      grid-area: 1/3/2/4;
-
+      grid-area: 2/1/3/2;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      letter-spacing: 1.1em;
     }
 
     &__display {
+      grid-area: 2/2/3/3;
+      width: 90%;
+      row-gap: 2em;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
 
-      grid-area: 1/2/2/3;
+
+      &-example {
+        width: 90%;
+        margin: 1em;
+
+      }
     }
 
     &__svg {
+      border: solid 2px black;
+      grid-area: 1/1/2/3;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-      grid-area: 1/1/2/2;
+
+      &-img {
+        height: 100%;
+      }
     }
   }
 
-  .about {
+  #projects__display-item4 {
+    display: flex;
+    visibility: visible;
+  }
 
-    grid-template-columns: 15% 1fr;
+
+  #projects__display-item5 {
+    display: none;
+    visibility: hidden;
+  }
+
+  #projects__display-item6 {
+    display: none;
+    visibility: hidden;
+  }
+
+
+  .about {
+    width: 100%;
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: 80% 20%;
     grid-template-rows: 1fr;
 
 
     &__title {
 
-      grid-area: 1/1/2/2;
+      grid-area: 1/2/2/3;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      letter-spacing: 1.1em;
+
     }
 
     &__content {
+      border: solid 2px black;
+      grid-area: 1/1/2/2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 5%;
 
+      margin: 0% &-text {
+        text-align: justify;
+        text-justify: inter-word;
+        padding-top: 5%;
+      }
+
+      &-img {
+        width: 100%;
+      }
+    }
+  }
+
+  .contact {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 40% 60%;
+
+    &__svg {
       grid-area: 1/2/2/3;
+      display: flex;
+      justify-self: center;
+      height: 100%;
+
+      &-img {
+        height: 100%;
+      }
+    }
+    &__form {
+
+      grid-area: 2/2/3/3;
+      margin: 0%;
+      height: fit-content;
+      width: 80%;
+      height: 90%;
+      justify-self: center;
+      display: flex;
+      justify-content: space-around;
+
+      &-label {}
+
+      &-input {}
+
+      &-submit {}
+
+
+    }
+    &__title {
+
+      grid-area: 1/1/3/2;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      letter-spacing: 1.1em;
+    }
+  }
+
+  footer {
+    ul {
+      font-size: 1em;
+    }
+    p {
+      font-size: 1em;
+    }
+  }
+}
+
+
+// Desktop
+@media only screen and (min-width: 770px) {
+
+
+  .landing {
+    min-height: 140vh;
+
+
+
+    &__navi {
+
+
+      &-links {}
+
+      &-links a {
+        font-size: 1.2em;
+      }
+
+      &-icon {
+        font-size: 2em;
+      }
+    }
+
+
+    &__greeting {
+
+      height: 100vh;
+
+
+      &-vanityCard {
+
+        p {
+          font-size: 1em;
+        }
+
+        h1 {
+          font-size: 2em;
+        }
+
+        h2 {
+          font-size: 1.2em;
+        }
+
+        button {
+          width: 50%;
+          font-size: 0.6em;
+        }
+      }
+    }
+
+    &__svg {
+      margin: 0;
+      width: 100%;
+
+
+      &-img {
+        width: 80%;
+      }
     }
   }
 
 
-  .contact {
+  .projects {
 
-    grid-template-columns: 20% 65% 15%;
-    grid-template-rows: 1fr;
-
-
-    &__svg {
-
-      grid-area: 1/1/2/2;
-      width: 100%;
-      height: fit-content;
-      margin: auto;
-
-    }
-
-
-    &__form {
-
-      grid-area: 1/2/2/3;
-    }
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 20% 80%;
+    align-items: center;
+    justify-items: center;
+    min-height: 180vh;
 
 
     &__title {
 
-      grid-area: 1/3/2/4;
+      grid-area: 2/1/3/2;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      letter-spacing: 1.1em;
+    }
+
+    &__display {
+      grid-area: 2/2/3/3;
+      width: 90%;
+      row-gap: 2em;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+
+      &-example {
+        width: 90%;
+        margin: 1em;
+
+      }
+    }
+
+    &__svg {
+      border: solid 2px black;
+      grid-area: 1/1/2/3;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      &-img {
+        height: 100%;
+      }
     }
   }
 
-  .footer {
-    border: solid 3px pink;
+  #projects__display-item4 {
+    display: flex;
+    visibility: visible;
+  }
+
+
+  #projects__display-item5 {
+    display: none;
+    visibility: hidden;
+  }
+
+  #projects__display-item6 {
+    display: none;
+    visibility: hidden;
+  }
+
+
+  .about {
+    width: 100%;
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 1fr;
+
+
+    &__title {
+
+      grid-area: 1/2/2/3;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      letter-spacing: 1.1em;
+
+    }
+
+    &__content {
+      border: solid 2px black;
+      grid-area: 1/1/2/2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 5%;
+
+      margin: 0% &-text {
+        text-align: justify;
+        text-justify: inter-word;
+        padding-top: 5%;
+      }
+
+      &-img {
+        width: 100%;
+      }
+    }
+  }
+
+  .contact {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 40% 60%;
+
+    &__svg {
+      grid-area: 1/2/2/3;
+      display: flex;
+      justify-self: center;
+      height: 100%;
+
+      &-img {
+        height: 100%;
+      }
+    }
+    &__form {
+
+      grid-area: 2/2/3/3;
+      margin: 0%;
+      height: fit-content;
+      width: 80%;
+      height: 90%;
+      justify-self: center;
+      display: flex;
+      justify-content: space-around;
+
+      &-label {}
+
+      &-input {}
+
+      &-submit {}
+
+
+    }
+    &__title {
+
+      grid-area: 1/1/3/2;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      letter-spacing: 1.1em;
+    }
+  }
+
+  footer {
+    ul {
+      font-size: 1em;
+    }
+    p {
+      font-size: 1em;
+    }
   }
 }

@@ -27,14 +27,30 @@ a {
 // Styling the home page
 .landing {
 
-  &__navi{ 
-    
+  &__navi {
+
+    &-icon {
+      font-family: $headingFont;
+    }
+
+    &-links {
+      font-family: $headingFont;
+    }
+
   }
+
   &__greeting {
 
     &-vanityCard {
       font-family: $headingFont;
       font-size: 2em;
+
+      button {
+        background-color: $blue;
+        font-family: $headingFont;
+        color: $white;
+
+      }
     }
   }
 }
@@ -54,6 +70,7 @@ a {
 
   &__content {
     background-color: $grey;
+
     &-text {
       font-size: 1.6em;
       font-family: $bodyFont;
@@ -89,6 +106,15 @@ a {
     }
   }
 }
+
+
+footer{
+  p{font-family: $headingFont;}
+  ul{font-family: $headingFont;}
+}
+
+
+
 
 // Desktop! 
 
