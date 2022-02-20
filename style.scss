@@ -1,5 +1,4 @@
-@import 'styles/reset.scss';
-@import 'styles/colorFonts.scss';
-@import 'styles/layout.scss';
-
-
+@use 'styles/reset.scss';
+@use 'styles/colorFonts.scss';
+@use 'styles/layout.scss';
+@use 'styles/styling.scss';

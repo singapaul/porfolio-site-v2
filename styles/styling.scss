@@ -1,0 +1,50 @@
+$yellow: #FCD91F;
+$red: #F25230;
+$white:#ffffff;
+$black: #000000;
+$blue: #0078B5;
+$grey: #C4C4C4;
+$green: #4C926D;
+$grey2: #2F3131;
+$brown: #392C35;
+
+
+
+.landing {
+
+  &__navi {}
+
+  &__greeting {
+
+    &-vanityCard {
+
+      button {
+        box-shadow: 10px 10px black;
+      }
+    }
+  }
+
+}
+
+
+.projects {
+  &__display {
+    box-shadow: 20px 20px $black;
+  }
+}
+
+
+.about {
+  &__content {
+    background-color: $brown;
+    color: $white;
+
+  }
+}
+
+
+.contact {
+  &__form {
+    box-shadow: 20px 20px $black;
+  }
+}
