@@ -98,13 +98,13 @@ footer ul {
   padding: 0;
 }
 .pageBreak__svg {
-  height: 200%;
-  width: 200%;
+  height: 600%;
+  width: 600%;
   display: block;
 }
 
 .landing {
-  min-height: 120vh;
+  min-height: 150vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -196,7 +196,8 @@ footer ul {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 5% 15% 1fr;
+  grid-template-rows: 5% 1fr 5% 15%;
+  min-height: 200vh;
 }
 .projects__title {
   border: solid 2px black;
@@ -208,7 +209,7 @@ footer ul {
   height: 100%;
 }
 .projects__display {
-  grid-area: 3/1/4/2;
+  grid-area: 2/1/3/2;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -217,17 +218,30 @@ footer ul {
   justify-content: space-evenly;
 }
 .projects__display-example {
-  width: 80%;
-  height: 17rem;
+  width: 280px;
+  height: 250px;
+  margin: 20px 20px 0 20px;
   border: solid pink 2px;
   justify-self: center;
   align-self: center;
 }
+.projects__viewMore {
+  grid-area: 3/1/4/2;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.projects__viewMore button {
+  height: 20px;
+  width: 100px;
+}
 .projects__svg {
   border: solid 2px black;
-  grid-area: 2/1/3/2;
+  grid-area: 4/1/5/2;
   display: flex;
-  width: 100%;
+  max-height: 90%;
   align-items: center;
   margin: 0;
   flex-direction: column;
@@ -235,7 +249,7 @@ footer ul {
   align-items: center;
 }
 .projects__svg-img {
-  height: 100%;
+  max-height: 100%;
 }
 
 #projects__display-item4 {
@@ -302,9 +316,9 @@ footer ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
   order: 2;
-  height: 100vh;
+  height: 70vh;
+  margin: 10% 0%;
 }
 .contact__svg-img {
   height: 100%;
@@ -314,9 +328,9 @@ footer ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5%;
-  height: fit-content;
-  width: 80%;
+  margin: 20% 5%;
+  height: 50vh;
+  width: 70%;
   order: 3;
 }
 .contact__form-label {
@@ -350,6 +364,7 @@ footer ul {
   justify-content: center;
   align-items: center;
   order: 1;
+  margin-top: 10%;
 }
 
 footer {
@@ -367,6 +382,7 @@ footer ul {
   white-space: nowrap;
   margin-right: 5%;
   font-size: 0.8em;
+  color: black;
 }
 footer a {
   margin: 0 3%;
@@ -672,7 +688,7 @@ footer p {
     width: 100%;
     min-height: 70vh;
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 10% 90%;
     grid-template-rows: 1fr;
   }
   .about__title {
@@ -704,7 +720,7 @@ footer p {
   .contact {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 2fr 20%;
+    grid-template-columns: 1fr 2fr 10%;
     grid-template-rows: 1fr;
   }
   .contact__svg {
@@ -745,10 +761,6 @@ footer p {
 }
 .landing__greeting-vanityCard button {
   box-shadow: 10px 10px black;
-}
-
-.projects__display {
-  box-shadow: 20px 20px #000000;
 }
 
 .about__content {

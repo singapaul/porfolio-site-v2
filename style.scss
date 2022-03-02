@@ -1,4 +1,4 @@
-@use 'styles/reset.scss';
-@use 'styles/colorFonts.scss';
-@use 'styles/layout.scss';
-@use 'styles/styling.scss';
+@use 'styles/reset.scss' as *;
+@use 'styles/colorFonts.scss' as *;
+@use 'styles/layout.scss' as *;
+@use 'styles/styling.scss' as *;

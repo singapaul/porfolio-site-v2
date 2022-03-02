@@ -1,17 +1,19 @@
 .pageBreak {
-  height: 15vh;
+  height: 7em;
   border: 2px solid black;
-  overflow: hidden;
-  margin: 2vh 0;
+  overflow: clip;
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 .pageBreak__svg {
-  height: 90%;
-  width: 100%;
+  height: 600%;
+  width: 600%;
   display: block;
 }
 
 .landing {
-  min-height: 120vh;
+  min-height: 150vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -103,7 +105,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 5% 15% 1fr;
+  grid-template-rows: 5% 1fr 10% 15%;
 }
 .projects__title {
   border: solid 2px black;
@@ -112,9 +114,10 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
 }
 .projects__display {
-  grid-area: 3/1/4/2;
+  grid-area: 2/1/3/2;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -123,15 +126,21 @@
   justify-content: space-evenly;
 }
 .projects__display-example {
-  width: 80%;
-  height: 17rem;
+  width: 280px;
+  height: 250px;
   border: solid pink 2px;
   justify-self: center;
   align-self: center;
 }
+.projects__viewMore {
+  grid-area: 3/1/4/2;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 .projects__svg {
   border: solid 2px black;
-  grid-area: 2/1/3/2;
+  grid-area: 4/1/5/2;
   display: flex;
   width: 100%;
   align-items: center;
@@ -448,7 +457,9 @@ footer p {
 }
 @media only screen and (min-width: 800px) {
   .landing {
+    min-height: 5vh;
     height: 100vh;
+    max-height: 100vh;
     height: auto;
     display: grid;
     grid-template-columns: 60% 40%;
@@ -495,7 +506,17 @@ footer p {
     margin: 0;
     height: fit-content;
     grid-area: 1/2/3/3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
+  .landing__svg-img {
+    width: 100%;
+    margin: 0;
+  }
+
   .projects {
     width: 100%;
     min-height: 100vh;
@@ -530,7 +551,7 @@ footer p {
   }
   .projects__display-example {
     width: 170px;
-    height: 170px;
+    height: 270px;
     background-color: black;
   }
   .projects__svg {
@@ -566,18 +587,18 @@ footer p {
     width: 100%;
     min-height: 70vh;
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 10% 90%;
     grid-template-rows: 1fr;
   }
   .about__title {
-    grid-area: 1/2/2/3;
+    grid-area: 1/1/2/2;
     writing-mode: vertical-rl;
     text-orientation: upright;
     letter-spacing: 1.1em;
   }
   .about__content {
     border: solid 2px black;
-    grid-area: 1/1/2/2;
+    grid-area: 1/2/2/3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -598,20 +619,21 @@ footer p {
   .contact {
     height: 100vh;
     display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 40% 60%;
+    grid-template-columns: 1fr 2fr 10%;
+    grid-template-rows: 1fr;
   }
   .contact__svg {
-    grid-area: 1/2/2/3;
+    grid-area: 1/1/2/2;
     display: flex;
     justify-self: center;
-    height: 100%;
+    height: 90%;
+    width: 100%;
   }
   .contact__svg-img {
-    height: 100%;
+    height: 90%;
   }
   .contact__form {
-    grid-area: 2/2/3/3;
+    grid-area: 1/2/2/3;
     margin: 0%;
     height: fit-content;
     width: 80%;
@@ -621,10 +643,12 @@ footer p {
     justify-content: space-around;
   }
   .contact__title {
-    grid-area: 1/1/3/2;
+    grid-area: 1/3/2/4;
     writing-mode: vertical-rl;
     text-orientation: upright;
     letter-spacing: 1.1em;
+    width: 100%;
+    height: 90%;
   }
 
   footer ul {

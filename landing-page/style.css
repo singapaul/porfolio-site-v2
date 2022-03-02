@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.landing {
+  height: 100vh;
+  height: auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 2% 98%;
+  align-items: flex-start;
+  justify-items: flex-start;
+}
+.landing__navi {
+  width: 100%;
+  grid-area: 1/1/2/2;
+}
+.landing__navi-links a {
+  font-size: 1.2em;
+}
+.landing__navi-icon {
+  font-size: 2em;
+}
+.landing__greeting {
+  grid-area: 2/1/3/2;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+.landing__greeting-vanityCard p {
+  font-size: 1em;
+}
+.landing__greeting-vanityCard h1 {
+  font-size: 2em;
+}
+.landing__greeting-vanityCard h2 {
+  font-size: 1.2em;
+}
+.landing__greeting-vanityCard button {
+  width: 50%;
+  font-size: 0.6em;
+}
+.landing__svg {
+  margin: 0;
+  height: fit-content;
+  grid-area: 1/2/3/3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.landing__svg-img {
+  width: 100%;
+  margin: 0;
+}
+.landing a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.landing__navi-icon {
+  font-family: "Fraunces", serif;
+}
+.landing__navi-links {
+  font-family: "Fraunces", serif;
+}
+.landing__greeting-vanityCard {
+  font-family: "Fraunces", serif;
+  font-size: 2em;
+}
+.landing__greeting-vanityCard button {
+  background-color: #0078B5;
+  font-family: "Fraunces", serif;
+  color: #ffffff;
+}

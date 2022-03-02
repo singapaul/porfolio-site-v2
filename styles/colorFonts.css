@@ -3,9 +3,20 @@ a {
   color: #000000;
 }
 
+.landing__navi-icon {
+  font-family: "Fraunces", serif;
+}
+.landing__navi-links {
+  font-family: "Fraunces", serif;
+}
 .landing__greeting-vanityCard {
   font-family: "Fraunces", serif;
   font-size: 2em;
+}
+.landing__greeting-vanityCard button {
+  background-color: #0078B5;
+  font-family: "Fraunces", serif;
+  color: #ffffff;
 }
 
 .projects__title {
@@ -40,7 +51,15 @@ a {
   background-color: green;
 }
 
-@media only screen and (min-width: 700px) {
+footer p {
+  font-family: "Fraunces", serif;
+}
+footer ul {
+  font-family: "Fraunces", serif;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 800px) {
   .projects__title {
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -55,4 +74,10 @@ a {
     writing-mode: vertical-rl;
     text-orientation: upright;
   }
+}
+.projects {
+  background-color: #C4C4C4;
+}
+.projects__title {
+  background-color: #ffffff;
 }
